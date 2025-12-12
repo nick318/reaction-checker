@@ -1,0 +1,115 @@
+.game-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+.game-area {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.message {
+  color: white;
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.reaction-time {
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+.try-again,
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.footer {
+  padding: 1rem 2rem;
+  background-color: #1a1a1a;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+  text-align: center;
+  min-height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer {
+  padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  gap: 1rem;
+}
+
+.reset-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.reset-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 600px) {
+  .message {
+    font-size: 1.75rem;
+    padding: 1rem;
+  }
+
+  .reaction-time {
+    font-size: 3rem;
+  }
+
+  .try-again,
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .footer {
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    min-height: 3rem;
+  }
+}
+
+@media (max-height: 500px) {
+  .message {
+    font-size: 1.5rem;
+  }
+
+  .reaction-time {
+    font-size: 2.5rem;
+  }
+
+  .footer {
+    min-height: 2.5rem;
+    padding: 0.5rem 1rem;
+  }
+}
