@@ -1,5 +1,5 @@
 {
-  "name": "worker-name",
+  "name": "reaction-checker",
   "compatibility_date": "2025-12-12",
   "assets": {
     "directory": "./dist"
