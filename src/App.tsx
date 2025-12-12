@@ -3,6 +3,8 @@ import './App.css'
 
 type GameState = 'idle' | 'waiting' | 'ready' | 'result' | 'tooEarly'
 
+const MAX_SCORES = 100
+
 function getInitialScores(): number[] {
   const saved = localStorage.getItem('reactionScores')
   if (saved) {
@@ -60,7 +62,7 @@ function App() {
       const time = Math.round(endTime - startTimeRef.current)
       setReactionTime(time)
 
-      const newScores = [...scores, time]
+      const newScores = [...scores, time].slice(-MAX_SCORES)
       setScores(newScores)
       localStorage.setItem('reactionScores', JSON.stringify(newScores))
 
